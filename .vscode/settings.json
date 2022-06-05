@@ -1,0 +1,11 @@
+{
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "javascript": "javascriptreact"
+    },
+    "emmet.preferences": {
+    
+    },
+    "terminal.integrated.minimumContrastRatio": 21,
+    "editor.columnSelection": false
+}
