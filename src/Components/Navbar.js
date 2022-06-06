@@ -13,7 +13,7 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto">
         <li className="nav-item">
-          <Link className="nav-link active" style={{fontWeight: 600, fontSize: 30, color: "white"}} aria-current="page" to="/">Home</Link>
+          <Link className="nav-link active" style={{fontWeight: 600, fontSize: 30, color: "white"}} aria-current="page" to="/TextUtils">Home</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" style={{fontWeight: 600, fontSize: 30, color: "white"}} to="/about">{props.aboutSite} </Link>

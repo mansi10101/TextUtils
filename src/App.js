@@ -5,12 +5,7 @@ import Navbar from './Components/Navbar';
 import Textarea from './Components/Textarea';
 import About from './Components/About';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -53,7 +48,7 @@ function App() {
     <div className="container">
     <Routes>
           <Route exact path="/about" element = {<About mode={mode} />}/>
-          <Route exact path="/" element = {<Textarea showAlert = {showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
+          <Route exact path="/TextUtils" element = {<Textarea showAlert = {showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
     </Routes> 
    
     </div>
