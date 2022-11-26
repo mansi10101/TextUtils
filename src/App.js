@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Appa.css';
 import Alert from './Components/Alert';
 import Navbar from './Components/Navbar';
-import Textarea from './Components/Textarea';
+import TextAreaWrapper from './Components/TextArea/TextAreaWrapper';
 import About from './Components/About';
 import React from "react";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -37,23 +37,20 @@ function App() {
   }
 
   return (
-    <>
+    <div>
     <Router>
-    <Navbar title="TextUtils" aboutSite="About" mode={mode} toggleMode={toggleMode}/>
+    <Navbar mode={mode} toggleMode={toggleMode}/>
     <Alert alert= {alert} />
-    {/* use "exact path" instead of "path" bcoz react might take u to partial location 
-    /users ---> component 1
-    /users/home ===> component 2  */}
 
-    <div className="container">
+    <div className="container" style ={{marginTop: '2rem'}}>
     <Routes>
           <Route exact path="/about" element = {<About mode={mode} />}/>
-          <Route exact path="/TextUtils" element = {<Textarea showAlert = {showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
+          <Route exact path="/TextUtils" element = {<TextAreaWrapper showAlert = {showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
     </Routes> 
    
     </div>
     </Router>
-    </>
+    </div>
   );
 }
 
